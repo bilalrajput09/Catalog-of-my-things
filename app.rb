@@ -5,10 +5,11 @@ require_relative 'game'
 require_relative 'author'
 
 class App
-  attr_accessor :list_of_books
+  attr_accessor :list_of_books, :list_of_games
 
   def initialize
     @list_of_books = []
+    @list_of_games = []
     @store = StoreHelper.new
   end
 
@@ -27,6 +28,23 @@ class App
       Publisher name is #{book.publisher} and book is in #{book.cover_state} state."
       puts
     end
+  end
+
+  def list_all_games
+    puts
+    @list_of_games.each_with_index do |game, i|
+      puts "#{i}) The game is #{game.multiplayer == 'yes' ? 'a' : 'not a'} multiplayer game."
+      puts "This game was published on #{game.publish_date} and last played at #{game.last_played_at}."
+      puts
+    end
+  end
+
+  def list_all_authors
+    puts
+    @list_of_games.each_with_index do |game, i|
+      puts "#{i}) first name: #{game.author.first_name} last name: #{game.author.last_name}"
+    end
+    puts
   end
 
   def add_a_book

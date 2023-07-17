@@ -19,4 +19,15 @@ class DataLoaderHelper
       app.list_of_books << book_obj
     end
   end
+
+  def load_games(app)
+    games = @store.read_files('game.json')
+    games.each do |game|
+      game_obj = Game.new(multiplayer: game['multiplayer'], last_played_at: game['last_played_at'],
+                          publish_date: game['publish_date'])
+      author = Author.new(first_name: game['author'][0]['first_name'], last_name: game['author'][0]['last_name'])
+      game_obj.assign_author(author)
+      app.list_of_games << game_obj
+    end
+  end
 end
