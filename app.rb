@@ -1,6 +1,8 @@
 require_relative 'book'
 require_relative 'label'
 require_relative 'store_helper'
+require_relative 'game'
+require_relative 'author'
 
 class App
   attr_accessor :list_of_books
@@ -50,6 +52,29 @@ class App
     store_books_with_labels
   end
 
+  def add_a_game
+    puts
+    puts 'Enter first name of author: '
+    first_name = gets.chomp
+    puts 'Enter last name of author: '
+    last_name = gets.chomp
+    puts 'Is the game multiplayer? (y/n): '
+    multiplayer_input = gets.chomp
+    multiplayer = multiplayer_input.downcase == 'y' ? 'yes' : 'no'
+    puts 'Enter publish date (YYYY-MM-DD): '
+    publish_date = gets.chomp
+    puts 'Enter last played date (YYYY-MM-DD):'
+    last_played_at = gets.chomp
+    puts
+    game = Game.new(multiplayer: multiplayer, last_played_at: last_played_at, publish_date: publish_date)
+    author = Author.new(first_name: first_name, last_name: last_name)
+    game.assign_author(author)
+    @list_of_games << game
+    puts 'Game created!'
+    puts
+    store_games_with_authors
+  end
+
   def exit
     abort
   end
@@ -62,5 +87,13 @@ class App
         label: [{ title: book.label.title, color: book.label.color }] }
     end
     @store.write_file('book.json', books_data)
+  end
+
+  def store_games_with_authors
+    game_data = @list_of_games.map do |game|
+      { multiplayer: game.multiplayer, last_played_at: game.last_played_at, publish_date: game.publish_date,
+        author: [{ first_name: game.author.first_name, last_name: game.author.last_name }] }
+    end
+    @store.write_file('game.json', game_data)
   end
 end
