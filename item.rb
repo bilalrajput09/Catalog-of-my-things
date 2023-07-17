@@ -1,7 +1,7 @@
 require 'date'
 
 class Item
-  attr_accessor :publish_date, :label
+  attr_accessor :publish_date, :label, :author
 
   def initialize(publish_date:, id: rand(0...100_000).to_s)
     @id = id,
@@ -15,6 +15,11 @@ class Item
   def assign_label(label_object)
     @label = label_object
     label_object.add_item(self) unless label_object.items.include?(self)
+  end
+
+  def assign_author(author_obj)
+    @author = author_obj
+    author_obj.add_item(self) unless author_obj.items.include?(self)
   end
 
   private
