@@ -1,6 +1,5 @@
-require_relative './select_option'
-require_relative './app'
-require_relative './data_loader_helper'
+require_relative 'select_option'
+require_relative 'app'
 
 def main
   select_option = SelectOption.new
