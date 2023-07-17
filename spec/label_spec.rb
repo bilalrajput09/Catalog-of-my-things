@@ -1,7 +1,6 @@
 require_relative '../label'
 require_relative '../item'
 
-
 RSpec.describe Label do
   subject { described_class.new(title: 'New', color: 'Green') }
   let(:item) { double('item') }
