@@ -1,0 +1,24 @@
+[
+  {
+    "publish_date": "2000-09-09",
+    "publisher": "Junaid",
+    "cover_state": "bad",
+    "label": [
+      {
+        "title": "Old",
+        "color": "Red"
+      }
+    ]
+  },
+  {
+    "publish_date": "2000-09-09",
+    "publisher": "Swat",
+    "cover_state": "average",
+    "label": [
+      {
+        "title": "New",
+        "color": "red"
+      }
+    ]
+  }
+]
