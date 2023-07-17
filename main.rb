@@ -1,9 +1,12 @@
 require_relative 'select_option'
 require_relative 'app'
+require_relative 'data_loader_helper'
 
 def main
   select_option = SelectOption.new
   app = App.new
+  data_loader = DataLoaderHelper.new
+  data_loader.load_books(app)
   loop do
     show_menu
     select_option.options(app)
