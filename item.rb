@@ -1,7 +1,7 @@
 require 'date'
 
 class Item
-  attr_accessor :publish_date, :label, :gener, :author
+  attr_accessor :publish_date, :label
 
   def initialize(publish_date:, id: rand(0...100_000).to_s)
     @id = id,
@@ -10,6 +10,11 @@ class Item
 
   def move_to_archive
     @archived = true if can_be_archived?
+  end
+
+  def assign_label(label_object)
+    @label = label_object
+    label_object.add_item(self) unless label_object.items.include?(self)
   end
 
   private
