@@ -1,6 +1,6 @@
-require_relative './book'
-require_relative './label'
-require_relative './store_helper'
+require_relative 'book'
+require_relative 'label'
+require_relative 'store_helper'
 
 class App
   attr_accessor :list_of_books
