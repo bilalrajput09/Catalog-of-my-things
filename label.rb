@@ -11,5 +11,6 @@ class Label
 
   def add_item(item_object)
     @items << item_object
+    item_object.assign_label(self) unless item_object.label == self
   end
 end
