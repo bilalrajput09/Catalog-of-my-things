@@ -1,14 +1,12 @@
 require_relative '../item'
 require_relative '../label'
 require_relative '../genre'
-
 RSpec.describe Item do
   subject { described_class.new(publish_date: '2001-09-09', archived: true) }
 
   let(:label_object) { Label.new(title: 'New', color: 'Green') }
   let(:genre_object) { Gener.new(name: 'Blue') }
   let(:item_obj) { double('item') }
-
 
   describe 'It will return true' do
     it '#move_to_archive method' do
