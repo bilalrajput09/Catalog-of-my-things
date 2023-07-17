@@ -11,6 +11,6 @@ class Author
 
   def add_item(item_object)
     @items << item_object
-    item_object.assign_author(self) unless item_object.author == self
+    item_object.author = self
   end
 end

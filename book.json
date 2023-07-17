@@ -20,5 +20,16 @@
         "color": "red"
       }
     ]
+  },
+  {
+    "publish_date": "2000-09-09",
+    "publisher": "Rizwan ",
+    "cover_state": "good",
+    "label": [
+      {
+        "title": "My book",
+        "color": "Blue"
+      }
+    ]
   }
 ]
