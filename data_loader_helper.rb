@@ -1,6 +1,8 @@
 require_relative 'store_helper'
 require_relative 'book'
 require_relative 'label'
+require_relative 'music_album'
+require_relative 'genre'
 
 class DataLoaderHelper
   def initialize
@@ -28,6 +30,16 @@ class DataLoaderHelper
       author = Author.new(first_name: game['author'][0]['first_name'], last_name: game['author'][0]['last_name'])
       game_obj.assign_author(author)
       app.list_of_games << game_obj
+    end
+  end
+
+  def load_music_albums(app)
+    music_album_data = @store.read_files('music_album.json')
+    music_album_data.each do |album|
+      music_album = MusicAlbum.new(on_spotify: album['on_spotify'], publish_date: album['publish_date'])
+      gener = Gener.new(name: album['gener'][0]['name'])
+      music_album.assign_gener(gener)
+      app.list_of_music_albums << music_album
     end
   end
 end
