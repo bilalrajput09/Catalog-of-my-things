@@ -20,7 +20,6 @@
     - [Setup](#setup)
   - [Install](#install)
   - [Usage](#usage)
-    - [- where filename.rb is the name of the Ruby file you want to run.](#--where-filenamerb-is-the-name-of-the-ruby-file-you-want-to-run)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -68,11 +67,11 @@
 ## Key Features <a name="key-features"></a>
 
 - [x] **Create a catalog** :- The user can create a catalog of things they own. The catalog can contain books, music albums, movies, and games.
-- [ ] **Add things to the catalog** :- The user can add things to the catalog. Each thing has a title, a creator, and a year of release.
-- [ ] **List all things in the catalog** :- The user can list all things in the catalog.
-- [ ] **Save the catalog to a file** :- The catalog data will be saved to a file. The file will be in JSON format.
-- [ ] **Load the catalog from a file** :- The catalog data will be loaded from a file. The file will be in JSON format.
-- [ ]
+- [x] **Add things to the catalog** :- The user can add things to the catalog. Each thing has a title, a creator, and a year of release.
+- [x] **List all things in the catalog** :- The user can list all things in the catalog.
+- [x] **Save the catalog to a file** :- The catalog data will be saved to a file. The file will be in JSON format.
+- [x] **Load the catalog from a file** :- The catalog data will be loaded from a file. The file will be in JSON format.
+- [x]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>`
 
@@ -98,7 +97,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/bilalrajput09/OOP-school-library.git
+  git clone https://github.com/bilalrajput09/Catalog_of_my_things.git
 ```
 
 ## Install
@@ -111,19 +110,17 @@ Install this project with:
 
 ## Usage
 
-To run a Ruby file in the command line, follow these steps:
+To run this project in the command line, follow these steps:
 
 Open a command prompt or terminal window on your computer.
 
-Navigate to the directory where the Ruby file is stored using the cd command.
+Navigate to the project directory where you cloned it using the cd command.
 
-Type the following command to run the Ruby file:
+Type the following command to run the project:
 
 ```sh
-ruby filename.rb
+ruby main.rb
 ```
-
-### - where filename.rb is the name of the Ruby file you want to run.
 
 <!-- AUTHORS -->
 
@@ -167,7 +164,7 @@ ruby filename.rb
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/bilalrajput09/OOP-school-library/issues).
+Feel free to check the [issues page](https://github.com/bilalrajput09/Catalog_of_my_things/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -183,7 +180,7 @@ Feel free to check the [issues page](https://github.com/bilalrajput09/OOP-school
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> We would like to thank the [Microverse team](https://www.microverse.org/) for allowing us to work on this Ruby OOP School Library project.
+> We would like to thank the [Microverse team](https://www.microverse.org/) for allowing us to work on this catalog of my things project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -195,7 +192,7 @@ Feel free to check the [issues page](https://github.com/bilalrajput09/OOP-school
 
   - To install and run the project, you will need to have Ruby installed on your computer. Once you have Ruby installed, you can download the project files and run the program from the command line using the following command:
     <br/>
-    `ruby mylist.rb`
+    `ruby main.rb`
 
 - **What technologies and libraries are used in the project?**
 
