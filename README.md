@@ -32,7 +32,7 @@
 
 # 📖 [Catalog_of_my_things] <a name="about-project"></a>
 
-> ## **[Catalog_of_my_things]** :- A simple command-line tool that will help you to keep a record of different types of things you own: books, music albums, movies, and games. The data will be stored in JSON files. so you can easily share it with your friends, and access it later.
+> ## **[Catalog_of_my_things]** :- A simple command-line tool that will help you to keep a record of different types of things you own: books, music albums, and games. The data will be stored in JSON files. so you can easily share it with your friends, and access it later.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -66,8 +66,8 @@
 
 ## Key Features <a name="key-features"></a>
 
-- [x] **Create a catalog** :- The user can create a catalog of things they own. The catalog can contain books, music albums, movies, and games.
-- [x] **Add things to the catalog** :- The user can add things to the catalog. Each thing has a title, a creator, and a year of release.
+- [x] **Create a catalog** :- The user can create a catalog of things they own. The catalog can contain books, music albums, and games.
+- [x] **Add things to the catalog** :- The user can add things to the catalog. Each thing has a title, a author/label/genre, and a year of release.
 - [x] **List all things in the catalog** :- The user can list all things in the catalog.
 - [x] **Save the catalog to a file** :- The catalog data will be saved to a file. The file will be in JSON format.
 - [x] **Load the catalog from a file** :- The catalog data will be loaded from a file. The file will be in JSON format.
