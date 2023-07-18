@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-<h1> <b> OOP School Library </b> <hr/>
+<h1> <b> Catalog Of My Things </b> <hr/>
 
 </div>
 
@@ -9,28 +9,31 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 \[Catalog\_of\_my\_things\] ](#-catalog_of_my_things-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+  - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [To get a local copy up and running, follow these steps.](#to-get-a-local-copy-up-and-running-follow-these-steps)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
   - [Install](#install)
   - [Usage](#usage)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
-- [📝 License](#license)
+    - [- where filename.rb is the name of the Ruby file you want to run.](#--where-filenamerb-is-the-name-of-the-ruby-file-you-want-to-run)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ ](#-faq-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Ruby_OOP_school_library] <a name="about-project"></a>
+# 📖 [Catalog_of_my_things] <a name="about-project"></a>
 
-> ## **[Ruby_OOP_school_library]** :- The OOP school library project in Ruby is a software application designed to help school librarians manage and organize their library resources efficiently using object-oriented programming principles. It allows librarians to add new books, manage book loans, and keep track of overdue books while providing a search feature for students and teachers.
+> ## **[Catalog_of_my_things]** :- A simple command-line tool that will help you to keep a record of different types of things you own: books, music albums, movies, and games. The data will be stored in JSON files. so you can easily share it with your friends, and access it later.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -53,7 +56,10 @@
 <details>
 <summary>Database</summary>
   <ul>
-    <li>none</li>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+  <ul>
+    <li><a href="https://www.json.org/">JSON</a></li>
   </ul>
 </details>
 
@@ -61,9 +67,12 @@
 
 ## Key Features <a name="key-features"></a>
 
-- Book inventory management: The system should allow librarians to add, edit, and delete books from the library inventory.
-- Simple command-line user-friendly interface.
-- User management: The system should allow librarians to create, edit, and delete user accounts and manage user permissions.
+- [x] **Create a catalog** :- The user can create a catalog of things they own. The catalog can contain books, music albums, movies, and games.
+- [ ] **Add things to the catalog** :- The user can add things to the catalog. Each thing has a title, a creator, and a year of release.
+- [ ] **List all things in the catalog** :- The user can list all things in the catalog.
+- [ ] **Save the catalog to a file** :- The catalog data will be saved to a file. The file will be in JSON format.
+- [ ] **Load the catalog from a file** :- The catalog data will be loaded from a file. The file will be in JSON format.
+- [ ]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>`
 
@@ -126,11 +135,17 @@ ruby filename.rb
 - Twitter: [@bilal_rajput09](https://twitter.com/bilal_rajput09)
 - LinkedIn [Bilal Rajput](https://www.linkedin.com/in/bilal-ahmed-18b12019a/)
 
-👤 **Bilal Ahmed**
+👤 **Abdul-Aziz Fakhriddinov**
 
-- GitHub: [@kayembajonathan](https://github.com/KAYEMBAJONATHAN)
-- LinkedIn: [@kayembajonathan](https://www.linkedin.com/in/jonathan-kayembb56247236/)
-- Twitter: [@JonathanKa97287](@JonathanKa97287)
+- GitHub: [@githubhandle](https://github.com/AFakhriddinov)
+- Facebook: [@facebookhandle](https://www.facebook.com/abdulaziz.faxriddinov)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/afakhriddinov/)
+
+👤 **Mohamed Sabry**
+
+- GitHub: [@mohamedSabry0](https://github.com/mohamedSabry0)
+- Twitter: [@mohsmh0](https://twitter.com/mohsmh0)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamed-sabry0/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -139,8 +154,10 @@ ruby filename.rb
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Graphical user interface** :- The program could be improved by adding a graphical user interface (GUI) to make it more user-friendly and accessible to non-technical users.
-- [ ] **User authentication** : Add a feature for user authentication to ensure that only authorized users can access the library system.
-- [ ] **Integration with external sources** :- Integrate the library system with external sources such as Google Books or Amazon to provide additional information about books.
+- [ ] **User authentication** : Add a feature for user authentication to ensure that only authorized users can access the catalog.
+- [ ] **Integration with external sources** :- Integrate the catalog with external sources such as spotify, google books, etc. to make it easier for users to add things to the catalog.
+- [ ] **Search for a thing in the catalog** :- The user can search for a thing in the catalog by its title.
+- [ ] **Delete a thing from the catalog** :- The user can delete a thing from the catalog.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
