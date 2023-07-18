@@ -2,10 +2,10 @@ require_relative '../item'
 require_relative '../label'
 require_relative '../genre'
 RSpec.describe Item do
-  subject { described_class.new(publish_date: '2001-09-09', archived: true) }
+  subject { described_class.new(publish_date: '2001-09-09') }
 
   let(:label_object) { Label.new(title: 'New', color: 'Green') }
-  let(:genre_object) { Gener.new(name: 'Blue') }
+  let(:genre_object) { Genre.new(name: 'Blue') }
   let(:item_obj) { double('item') }
 
   describe 'It will return true' do
@@ -21,9 +21,9 @@ RSpec.describe Item do
     end
   end
 
-  describe 'It will add item to gener object array' do
-    it '#assign_gener method' do
-      subject.assign_gener(genre_object)
+  describe 'It will add item to genre object array' do
+    it '#assign_genre method' do
+      subject.assign_genre(genre_object)
       expect(genre_object.items.length).to eq(1)
     end
   end

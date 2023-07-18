@@ -17,5 +17,5 @@
   "workbench.editor.enablePreview": false,
   "workbench.panel.defaultLocation": "right",
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "window.zoomLevel": 2
+  "window.zoomLevel": 0
 }

@@ -2,9 +2,18 @@
   {
     "publish_date": "2023-06-23",
     "on_spotify": true,
-    "gener": [
+    "genre": [
       {
         "name": "Rock"
+      }
+    ]
+  },
+  {
+    "publish_date": "2000-09-09",
+    "on_spotify": true,
+    "genre": [
+      {
+        "name": "Bass"
       }
     ]
   }

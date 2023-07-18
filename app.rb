@@ -50,11 +50,11 @@ class App
     puts
   end
 
-  def list_all_geners
+  def list_all_genres
     puts
-    puts 'Geners List: '
+    puts 'Genre List: '
     @list_of_music_albums.each_with_index do |album, i|
-      puts "#{i}) #{album.gener.name}"
+      puts "#{i}) #{album.genre.name}"
     end
     puts
   end
@@ -124,15 +124,15 @@ class App
     on_spotify_input = on_spotify_input.downcase! if on_spotify_input == 'Y'
     on_spotify = on_spotify_input == 'y'
     puts
-    puts 'Enter gener of album: '
-    gener_name = gets.chomp
+    puts 'Enter genre of album: '
+    genre_name = gets.chomp
     puts
     music_album = MusicAlbum.new(on_spotify: on_spotify, publish_date: publish_date)
-    gener = Gener.new(name: gener_name.capitalize)
-    music_album.assign_gener(gener)
+    genre = Genre.new(name: genre_name.capitalize)
+    music_album.assign_genre(genre)
     @list_of_music_albums << music_album
     puts 'Music album created!'
-    store_music_albums_with_geners
+    store_music_albums_with_genres
   end
 
   def exit
@@ -157,9 +157,9 @@ class App
     @store.write_file('game.json', game_data)
   end
 
-  def store_music_albums_with_geners
+  def store_music_albums_with_genres
     music_album_data = @list_of_music_albums.map do |album|
-      { publish_date: album.publish_date, on_spotify: album.on_spotify, gener: [name: album.gener.name] }
+      { publish_date: album.publish_date, on_spotify: album.on_spotify, genre: [name: album.genre.name] }
     end
     @store.write_file('music_album.json', music_album_data)
   end
