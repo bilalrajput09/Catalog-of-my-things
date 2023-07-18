@@ -8,6 +8,7 @@ def main
   data_loader = DataLoaderHelper.new
   data_loader.load_books(app)
   data_loader.load_games(app)
+  data_loader.load_music_albums(app)
   loop do
     show_menu
     select_option.options(app)

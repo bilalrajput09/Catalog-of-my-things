@@ -3,13 +3,16 @@ require_relative 'label'
 require_relative 'store_helper'
 require_relative 'game'
 require_relative 'author'
+require_relative 'genre'
+require_relative 'music_album'
 
 class App
-  attr_accessor :list_of_books, :list_of_games
+  attr_accessor :list_of_books, :list_of_games, :list_of_music_albums
 
   def initialize
     @list_of_books = []
     @list_of_games = []
+    @list_of_music_albums = []
     @store = StoreHelper.new
   end
 
@@ -45,6 +48,24 @@ class App
       puts "#{i}) first name: #{game.author.first_name} last name: #{game.author.last_name}"
     end
     puts
+  end
+
+  def list_all_geners
+    puts
+    puts 'Geners List: '
+    @list_of_music_albums.each_with_index do |album, i|
+      puts "#{i}) #{album.gener.name}"
+    end
+    puts
+  end
+
+  def list_all_music_albums
+    puts
+    @list_of_music_albums.each_with_index do |album, i|
+      puts "#{i}) This album was created on #{album.publish_date}."
+      puts "It is #{album.on_spotify ? 'on spotify' : 'not on spotify'}"
+      puts
+    end
   end
 
   def add_a_book
@@ -93,6 +114,27 @@ class App
     store_games_with_authors
   end
 
+  def add_a_music_album
+    puts
+    puts 'Enter publish date (YYYY-MM-DD): '
+    publish_date = gets.chomp
+    puts
+    puts 'Is this album on spotify? (y/n): '
+    on_spotify_input = gets.chomp
+    on_spotify_input = on_spotify_input.downcase! if on_spotify_input == 'Y'
+    on_spotify = on_spotify_input == 'y'
+    puts
+    puts 'Enter gener of album: '
+    gener_name = gets.chomp
+    puts
+    music_album = MusicAlbum.new(on_spotify: on_spotify, publish_date: publish_date)
+    gener = Gener.new(name: gener_name.capitalize)
+    music_album.assign_gener(gener)
+    @list_of_music_albums << music_album
+    puts 'Music album created!'
+    store_music_albums_with_geners
+  end
+
   def exit
     abort
   end
@@ -113,5 +155,12 @@ class App
         author: [{ first_name: game.author.first_name, last_name: game.author.last_name }] }
     end
     @store.write_file('game.json', game_data)
+  end
+
+  def store_music_albums_with_geners
+    music_album_data = @list_of_music_albums.map do |album|
+      { publish_date: album.publish_date, on_spotify: album.on_spotify, gener: [name: album.gener.name] }
+    end
+    @store.write_file('music_album.json', music_album_data)
   end
 end
