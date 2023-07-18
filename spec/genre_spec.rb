@@ -1,6 +1,6 @@
-require_relative '../gener'
+require_relative '../genre'
 
-RSpec.describe Gener do
+RSpec.describe Genre do
   subject { described_class.new(name: 'Blue') }
   let(:item_obj) { double('item') }
   it '#add_item method' do

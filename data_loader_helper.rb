@@ -37,8 +37,8 @@ class DataLoaderHelper
     music_album_data = @store.read_files('music_album.json')
     music_album_data.each do |album|
       music_album = MusicAlbum.new(on_spotify: album['on_spotify'], publish_date: album['publish_date'])
-      gener = Gener.new(name: album['gener'][0]['name'])
-      music_album.assign_gener(gener)
+      genre = Genre.new(name: album['genre'][0]['name'])
+      music_album.assign_genre(genre)
       app.list_of_music_albums << music_album
     end
   end

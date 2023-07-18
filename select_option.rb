@@ -4,7 +4,7 @@ class SelectOption
       '1' => :list_all_books,
       '2' => :list_all_music_albums,
       '3' => :list_all_games,
-      '4' => :list_all_geners,
+      '4' => :list_all_genres,
       '5' => :list_all_labels,
       '6' => :list_all_authors,
       '7' => :add_a_book,

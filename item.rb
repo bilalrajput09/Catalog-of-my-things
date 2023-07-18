@@ -1,7 +1,7 @@
 require 'date'
 
 class Item
-  attr_accessor :publish_date, :label, :author, :gener
+  attr_accessor :publish_date, :label, :author, :genre
 
   def initialize(publish_date:, id: rand(0...100_000).to_s)
     @id = id,
@@ -22,9 +22,9 @@ class Item
     author_obj.add_item(self) unless author_obj.items.include?(self)
   end
 
-  def assign_gener(gener_obj)
-    @gener = gener_obj
-    gener_obj.add_item(self) unless gener_obj.items.include?(self)
+  def assign_genre(genre_obj)
+    @genre = genre_obj
+    genre_obj.add_item(self) unless genre_obj.items.include?(self)
   end
 
   private
