@@ -122,6 +122,10 @@ Type the following command to run the project:
 ruby main.rb
 ```
 
+## Live Video
+
+[Watch the video](https://drive.google.com/file/d/1GErMyz1wyE3Z908NjXSPoIwCq4dyUsTa/view?usp=sharing)
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
