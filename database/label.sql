@@ -1,0 +1,5 @@
+CREATE TABLE labels (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  color VARCHAR(255) NOT NULL
+);
